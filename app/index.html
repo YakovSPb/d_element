@@ -13,6 +13,7 @@
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 	
+	<link rel="stylesheet" href="css/modalwindow.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
@@ -94,64 +95,115 @@
 
 
 	<footer class="footer">
-			<div class="footer__line"></div>
-			<div class="footer-inner">
-					<div class="team">
-						<div class="container">
-						<div class="team__info">
-							<div class="team__title">Intersted to woek with our team?</div>
-							<div class="team__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-						</div>
-						<div class="team__btn"><a href="" class="btn">Let’s Talk</a></div>
-					</div>				
+		<div class="footer__line"></div>
+		<div class="footer-inner">
+			<div class="team">
+				<div class="container">
+					<div class="team__info">
+						<div class="team__title">Intersted to woek with our team?</div>
+						<div class="team__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+					</div>
+					<div class="team__btn btn">Let’s Talk</div>
+				</div>				
 			</div>
 			<div class="footer-body">
 				<div class="container">
 					<div class="footer-body__inner">
 
-					<div class="footer__adress">
-						<div class="logo footer__logo"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="16" cy="24" r="16" fill="#98C3E8"/> <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/> <path d="M38.3 31L33.38 17H29.96L25.06 31H28.04L28.88 28.48H34.46L35.3 31H38.3ZM31.68 20.18L33.6 25.9H29.76L31.68 20.18Z" fill="#316099"/> </svg>
-							<div class="logo__text">Afrianska</div>
+						<div class="footer__adress">
+							<div class="logo footer__logo"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="16" cy="24" r="16" fill="#98C3E8"/> <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/> <path d="M38.3 31L33.38 17H29.96L25.06 31H28.04L28.88 28.48H34.46L35.3 31H38.3ZM31.68 20.18L33.6 25.9H29.76L31.68 20.18Z" fill="#316099"/> </svg>
+								<div class="logo__text">Afrianska</div>
+							</div>
+							<div class="footer__list">
+								<ul>
+									<li><span>A.</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+									<li><span>T.</span><a href="tel:+6281273134321">+62-812-7313-4321</a></li>
+									<li><span>E.</span><a href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a></li>
+								</ul>
+							</div>
+							<div class="footer__copy">
+								2019 © Afrianska. All rights reserved.
+							</div>
 						</div>
-						<div class="footer__list">
-							<ul>
-								<li><span>A.</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-								<li><span>T.</span><a href="tel:+6281273134321">+62-812-7313-4321</a></li>
-								<li><span>E.</span><a href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a></li>
-							</ul>
+						<div class="footer__item">
+							<div class="footer__item-title">About US</div>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="">About</a></li>
+									<li><a href="">What We Do</a></li>
+									<li><a href="">Project</a></li>
+									<li><a href="">How It Work With Us</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="footer__copy">
-							2019 © Afrianska. All rights reserved.
+						<div class="footer__item">
+							<div class="footer__item-title">Follow US</div>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="">Instagram</a></li>
+									<li><a href="">Facebook</a></li>
+									<li><a href="">LinkedIn</a></li>
+									<li><a href="">Youtube</a></li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div class="footer__item">
-						<div class="footer__item-title">About US</div>
-						<div class="footer__menu">
-							<ul>
-								<li><a href="">About</a></li>
-								<li><a href="">What We Do</a></li>
-								<li><a href="">Project</a></li>
-								<li><a href="">How It Work With Us</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__item">
-						<div class="footer__item-title">Follow US</div>
-						<div class="footer__menu">
-							<ul>
-								<li><a href="">Instagram</a></li>
-								<li><a href="">Facebook</a></li>
-								<li><a href="">LinkedIn</a></li>
-								<li><a href="">Youtube</a></li>
-							</ul>
-						</div>
-					</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+
+	<div id="yak-my-modal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span id="close-btn" class="close">&times;</span>
+				<h2>Send us message</h2>
+			</div>
+			<div class="modal-body">
+				<div class="form">
+					<form class="my-form form-modal">
+		    <input type="hidden" name="project_name" value="Site Name">
+		    <input type="hidden" name="admin_email" value="yakov_dux@bk.ru">
+		    <input type="hidden" name="form_subject" value="Новая заявка с сайта India">
+
+						<div class="form__item">
+							<div class="form__label">
+								<label>Full Name</label>
+							</div>
+							<div class="form__input form__input-name">
+								<input class="field" type="text" placeholder="Your Name">
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__label">
+								<label>Email</label>
+							</div>
+							<div class="email-error"></div>
+							<div class="form__input form__input-mail">
+								<input class="field" type="text" placeholder="Your Email">
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__label form__input-message">
+								<label>Message</label>
+							</div>
+							<div class="form__input">
+								<textarea class="field" type="text" placeholder="Your Message"></textarea>
+							</div>
+						</div>
+						<input type="submit" class="form__btn btn validateBtn" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="success">Спасибо за заявку!</div>
+	<script
+	src="https://code.jquery.com/jquery-3.5.0.min.js"
+	integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+	crossorigin="anonymous"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
