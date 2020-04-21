@@ -1,0 +1,606 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $lightblue
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+textarea:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+input:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+
+html
+	-ms-overflow-style: none
+	scrollbar-width: none
+	&::-webkit-scrollbar
+		width: 0
+	&::-webkit-scrollbar
+		width: 0
+
+h1, .h1
+	font-size: 60px
+	line-height: 68px
+	font-weight: normal
+	letter-spacing: 0.04em
+	font-family: 'Times New Roman', sans-serif
+	+media-breakpoint-down(sm)
+		font-size: 30px
+		line-height: 35px
+
+
+.btn
+	width: 220px
+	height: 56px
+	background: $lightblue
+	display: block
+	font-size: 16px
+	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #fff
+	box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2)
+	border-radius: 10px
+	transition: all .5s ease
+	&:hover
+		color: #fff
+		text-decoration: none
+		background: darken($lightblue, 10%)
+
+html
+  overflow: scroll
+  overflow-x: hidden
+::-webkit-scrollbar
+  width: 0px
+
+body
+	font-size: 16px
+	min-width: 320px
+	margin: 0 auto
+	position: relative
+	line-height: 1.4
+	font-family: 'Gilroy', sans-serif
+	overflow-x: hidden
+	color: $text
+	letter-spacing: 0.05em
+// Custom Sass / Remove before use
+
+.container
+	position: relative
+	max-width: 940px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+// Header
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 40px
+	padding: 0 5%
+
+.logo
+	svg
+		width: 48px
+		height: 32px
+.gumburger
+	cursor: pointer
+	margin-right: 40px
+	+media-breakpoint-down(md)
+		margin-right: 10px
+
+//Promo
+.promo
+	height: 681px
+	padding-top: 110px
+	background: url('../img/@2x/promo_bg.png') no-repeat top right 5%
+	+media-breakpoint-down(md)
+		height: 600px
+	&__info
+		max-width: 580px
+		+media-breakpoint-down(lg)
+			background: rgba(255,255,255, .8)
+			border-radius: 20px
+			padding: 10px
+	&__desc
+		font-size: 16px
+		line-height: 24px
+		opacity: .6
+		max-width: 425px
+		margin: 40px 0 70px 0
+
+
+// Products
+.products
+	&__inner
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		position: relative
+		padding-bottom: 110px
+		+media-breakpoint-down(md)
+			padding-bottom: 30px
+	&__info
+		max-width: 358px
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 36px
+		line-height: 46px
+		+media-breakpoint-down(md)
+			position: static
+			margin: 0 auto 50px auto
+		+media-breakpoint-down(sm)
+			font-size: 30px
+			line-height: 35px
+.product
+	position: relative
+	max-width: 380px
+	height: 525px
+	display: flex
+	flex-direction: column
+	box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
+	border-radius: 10px
+	padding: 48px
+	margin-bottom: 100px
+	+media-breakpoint-down(md)
+		margin: 0 auto 50px auto
+	&:nth-child(1)
+		.product__img
+			img
+				position: absolute
+				top: -72px
+				left: 50%
+				margin-left: -127.5px
+	&:nth-child(2)
+		position: absolute
+		top: 306px
+		left: 62px
+		+media-breakpoint-down(md)
+			position: relative
+			top: 0
+			left: 0
+		.product__img
+			img
+				position: absolute
+				top: -12px
+				left: 50%
+				margin-left: -116.5px
+	&:nth-child(3)
+		.product__img
+			img
+				position: absolute
+				top: -12px
+				left: 50%
+				margin-left: -116.5px
+	&__img
+		position: relative
+		height: 208px
+		text-align: center
+		img
+	&__title
+		font-size: 19px
+		font-weight: 600
+		margin: -46px 0 20px 0
+		+media-breakpoint-down(sm)
+			font-size: 18px
+	&__text
+		opacity: .6
+		margin-bottom: 35px
+		line-height: 26px
+	&__link
+		position: absolute
+		bottom: 48px
+		left: 48px
+		font-size: 14px
+		color: $lightblue
+		font-weight: 600
+		cursor: pointer
+		&:hover
+			svg
+				margin-left: 35px
+		svg
+			margin-left: 28px
+			transition: all .5s ease
+
+// Clinets
+.clients
+	background: $lightblue
+	border-radius: 200px 0px 0px 0px
+	padding: 96px 0 125px 0
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 110px
+		+media-breakpoint-down(md)
+			flex-direction: column
+			padding-bottom: 30px
+	&__title
+		font-size: 36px
+		line-height: 46px
+		color: #fff
+		width: 223px
+		font-weight: bold
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+			font-size: 30px
+			line-height: 35px
+	&__text
+		max-width: 540px
+		color: #fff
+		opacity: .6
+	&__body
+		display: flex
+		flex-wrap: wrap
+	&__item
+		position: relative
+		width: 25%
+		height: 128px
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: bold
+		color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		border-bottom: 1px solid #fff
+		border-right: 1px solid #fff
+		+media-breakpoint-down(md)
+			width: 50%
+			border-right: 1px solid #fff!important 
+			border-bottom: 1px solid #fff!important
+			padding: 10px
+			&:nth-child(even)
+				border-right: 0!important
+			&:last-child
+				border-bottom: 0!important
+			&:nth-last-child(2)
+				border-bottom: 0!important
+		&:nth-child(4n)
+			border-right: 0
+		&:nth-child(n+5)
+			border-bottom: 0
+		&:last-child
+			text-transform: none
+			color: rgba(31, 63, 104, 0)
+			cursor: pointer
+			&:hover
+				&:before
+					background: darken($text, 10%)
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0	
+				background: $text
+				opacity: .2
+				z-index: 0
+				transition: all .3s ease
+			&:after
+				content: 'More Client'
+				position: absolute
+				top: 47px
+				left: 53px
+				color: #fff
+				+media-breakpoint-down(sm)
+					left: 40px
+					top: 30px
+
+
+// Footer
+.footer
+	background: $lightblue
+	position: relative
+	&__item
+		+media-breakpoint-down(md)
+			width: 290px
+			margin-top: 30px
+			text-align: center
+	&__line
+		position: absolute
+		top: 379px
+		width: 100%
+		height: 1px
+		background: rgba(255, 255, 255, .4)
+		+media-breakpoint-down(md)
+			display: none
+	&__adress
+		max-width: 290px
+		margin-right: 100px
+		+media-breakpoint-down(md)
+			margin-right: 0
+	&__logo
+		display: flex
+		align-items: center
+		color: #fff
+		font-size: 28px
+		line-height: 46px
+		svg
+			padding-right: 10px
+	&__list
+		margin-top: 33px
+		ul
+			list-style-type: none
+			padding-left: 0
+			li
+				display: flex
+				margin-bottom: 24px
+				a
+					color: #fff
+					&:hover
+						text-decoration: none
+				span
+					margin-right: 20px
+	&__copy
+		color: rgba(255, 255, 255, .4)
+		margin-top: 50px
+	&__item-title
+		font-size: 20px
+		line-height: 30px
+	&__menu
+		margin-top: 32px
+		margin-right: 77px
+		+media-breakpoint-down(md)
+			margin-right: 0
+		ul
+			list-style-type: none
+			padding-left: 0
+			li
+				margin-bottom: 16px
+				a
+					color: #fff
+					&:hover
+						text-decoration: none
+.team
+	background: $blue
+	border-radius: 0px 200px 0px 0px
+	margin-right: 5%
+	padding: 91px 0 96px 0
+	position: relative
+	+media-breakpoint-down(md)
+		padding: 30px 0 20px
+		border-bottom: 1px solid rgba(255, 255, 255, .4)
+	&__title
+		font-size: 36px
+		line-height: 46px
+		color: #fff
+		max-width: 320px
+		+media-breakpoint-down(md)
+			font-size: 30px
+			line-height: 35px
+		+media-breakpoint-down(sm)
+			max-width: 240px
+	&__desc
+		margin-top: 32px
+		color: #fff
+		opacity: .6
+		max-width: 460px
+	&__btn
+		position: absolute
+		top: 55px
+		right: 52px
+		+media-breakpoint-down(md)
+			position: static
+			margin-top: 40px
+
+.footer-body
+	background: $blue
+	margin-right: 5%
+	padding: 96px 0 64px 0
+	color: #fff
+	+media-breakpoint-down(md)
+		padding: 30px 0 20px 0
+	&__inner
+		display: flex
+		+media-breakpoint-down(md)
+			flex-direction: column
+			align-items: center
+
+
+// menu
+.m-menu
+	margin: 0
+	position: fixed
+	right: 0
+	top: 0
+	height: 100vh
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	list-style-type: none
+	font-size: 30px
+	line-height: 60px
+	background-color: $lightblue
+	z-index: 1000	
+	transform: translateX(100%)
+	transition: .5s ease
+	a
+		color: #fff
+		text-decoration: none
+.m-menu__active
+	transform: translateX(0)
+.close-menu
+	color: #fff
+	position: fixed
+	right: 7%
+	top: 25px
+	margin: 0		
+	font-size: 50px
+	font-weight: 900
+	cursor: pointer
+.menu__list
+	list-style-type: none
+
+
+// Contact
+.contact-promo
+	height: 250px
+	margin-top: 49px
+	background: url('../img/@2x/contact_bg.png') no-repeat center
+	background-size: cover
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	&__title
+		.h1, h1
+			font-size: 44px
+			color: #fff
+			font-family: 'Gilroy', sans-serif
+			font-weight: 900
+			+media-breakpoint-down(md)
+				font-size: 30px
+				line-height: 35px
+	&__desc
+		max-width: 630px
+		margin: 0 auto
+		text-align: center
+		color: rgba(255, 255, 255, 0.6)
+
+.contact-inner
+	display: flex
+	padding: 57px 0 96px 0
+	+media-breakpoint-down(md)
+		padding: 30px 0
+		flex-direction: column-reverse
+		align-items: center
+
+.address
+	&__img
+		padding: 70px 0
+	&__title
+		font-size: 20px
+		line-height: 30px
+		text-transform: uppercase
+		font-weight: bold
+		margin-bottom: 24px
+	&__desc
+		margin-bottom: 40px
+		color: rgba(31, 63, 104, 0.6)
+	&__phone
+		margin-bottom: 16px
+		display: flex
+		align-items: center
+		svg
+			opacity: .6
+			margin-right: 20px
+		a
+			color: rgba(31, 63, 104, 0.6)
+			&:hover
+				text-decoration: none
+	&__phone-last
+		margin-bottom: 40px
+	&__url
+		margin-bottom: 16px
+		display: flex
+		align-items: center
+		svg
+			opacity: .6
+			margin-right: 20px
+		a
+			color: rgba(31, 63, 104, 0.6)
+			&:hover
+				text-decoration: none
+	&__email
+		margin-bottom: 16px
+		display: flex
+		align-items: center
+		svg
+			opacity: .6
+			margin-right: 20px
+		a
+			color: rgba(31, 63, 104, 0.6)
+			&:hover
+				text-decoration: none
+
+// Form
+#form
+	width: 540px
+	box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2)
+	border-radius: 10px
+	padding: 56px
+	+media-breakpoint-down(md)
+		width: 100%
+		padding: 20px
+.form
+	&__title
+		font-size: 20px
+		line-height: 30px
+		font-weight: bold
+		margin-bottom: 48px
+	&__label
+		opacity: .8
+	&__input
+		input
+			width: 100%
+			height: 72px
+			border: 1px solid rgba(53, 110, 173, .2)
+			box-sizing: border-box
+			border-radius: 10px
+			padding: 0 42px
+			color: $text
+			margin-bottom: 32px
+			+media-breakpoint-down(md)
+				height: 40px
+				padding: 0 20px
+		textarea
+			width: 100%
+			height: 144px
+			border: 1px solid rgba(53, 110, 173, .2)
+			box-sizing: border-box
+			border-radius: 10px
+			padding: 21px 42px
+			color: $text
+			margin-bottom: 72px
+			+media-breakpoint-down(md)
+				padding: 20px
+	&__btn
+		width: 100%
+
+
+// Map
+.map
+	margin-bottom: 96px
+	+media-breakpoint-down(md)
+		margin-bottom: 30px	
+	&__img
+		height: 480px
+		+media-breakpoint-down(sm)
+			height: 200px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
